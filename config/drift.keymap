@@ -25,6 +25,7 @@
 #define MOUSE   4
 #define SCROLL  5
 #define MOUSE2  6
+#define SCROLL2 7
 
 // Reference: https://zmk.dev/docs/keymaps/behaviors/
 
@@ -180,13 +181,25 @@
         mouse2_layer {
             display-name = "mouse2";
             bindings = <
-                &trans &trans &trans &trans &trans &trans &trans               &to BASE &trans   &trans   &trans     &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans               &trans   &trans   &trans   &mo SCROLL &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans               &trans   &mkp MB3 &mkp MB1 &mkp MB2   &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans   &trans   &pan     &orbit     &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans               &to BASE &trans   &trans   &trans      &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans               &trans   &trans   &trans   &mo SCROLL2 &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans               &trans   &mkp MB3 &mkp MB1 &mkp MB2    &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans   &trans   &pan     &orbit      &trans &trans &trans
                                             &trans &trans &trans               &trans   &trans
             >;
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
-        };        
+        };
+		
+		scroll2_layer {
+            display-name = "scroll2";
+            bindings = <
+                &trans &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                                            &trans &trans &trans               &trans &trans
+            >;
+            sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
+        };
     };
 };
