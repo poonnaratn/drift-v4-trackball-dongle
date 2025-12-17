@@ -155,7 +155,7 @@
                               &trans        &trans        &trans                              &trans  &trans
             >;
 
-            label = "fn&sym";
+            label = "fn";
         };
 
         mouse_layer {
@@ -220,18 +220,6 @@
             >;
 
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
-        };
-
-        fn_adj {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans
-            >;
-
-            label = "fn&adj";
         };
     };
 };
