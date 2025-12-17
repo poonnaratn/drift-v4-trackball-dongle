@@ -154,10 +154,10 @@
 
         cmd {
             bindings = <
-&trans  &trans  &trans  &trans       &trans          &trans         &trans                          &trans     &trans    &trans          &trans           &trans    &trans  &trans
-&trans  &trans  &trans  &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                          &trans     &kp DEL   &trans          &trans           &kp BSLH  &trans  &trans
-&trans  &trans  &trans  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &trans                          &kp ENTER  &kp BSPC  &kp TAB         &trans           &kp APOS  &trans  &trans
-&trans  &trans  &trans  &trans       &trans          &trans         &trans  &trans  &trans          &kp LBKT   &kp RBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans    &trans  &trans
+&trans  &trans  &trans  &trans       &trans          &trans         &trans                          &trans     &trans    &trans          &trans            &trans    &trans  &trans
+&trans  &trans  &trans  &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                          &trans     &kp DEL   &kp LEFT_GUI    &kp LEFT_CONTROL  &kp BSLH  &trans  &trans
+&trans  &trans  &trans  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &trans                          &kp ENTER  &kp BSPC  &kp TAB         &kp LEFT_ALT      &kp APOS  &trans  &trans
+&trans  &trans  &trans  &trans       &trans          &trans         &trans  &trans  &trans          &kp LBKT   &kp RBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE   &trans    &trans  &trans
                         &trans       &trans          &trans                         &kp RIGHT_META  &trans
             >;
 
