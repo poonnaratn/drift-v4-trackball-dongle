@@ -37,13 +37,13 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <2 3>;
-            then-layer = <8>;
+            if-layers = <3 4>;
+            then-layer = <9>;
         };
 
         tri2 {
-            if-layers = <3 2>;
-            then-layer = <8>;
+            if-layers = <4 3>;
+            then-layer = <9>;
         };
     };
 
@@ -120,9 +120,22 @@
             bindings = <
 &kp ESC         &kp GRAVE                 &kp N1  &kp N2     &kp N3                    &kp N4        &kp N5                               &kp N6                      &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS        &kp EQUAL
 &kp LC(C)       &kp TAB                   &kp Q   &kp W      &kp E                     &kp R         &kp T                                &kp Y                       &kp U   &kp I      &kp O    &kp P     &kp LBKT         &kp RBKT
-&kp LGUI        &mt RIGHT_CONTROL ESCAPE  &kp A   &kp S      &kp D                     &kp F         &kp G                                &kp H                       &kp J   &kp K      &kp L    &kp SEMI  &kp SQT          &kp RIGHT_META
-&kp LEFT_SHIFT  &kp LEFT_SHIFT            &kp Z   &kp X      &kp C                     &kp V         &kp B   &tog 1  &tog 4               &kp N                       &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT  &kp LEFT_GUI
-                                                  &kp ENTER  &thumb_layer 3 BACKSPACE  &kp LEFT_GUI                  &mt RIGHT_ALT ENTER  &thumb_layer_space 2 SPACE
+&kp LEFT_SHIFT  &mt RIGHT_CONTROL ESCAPE  &kp A   &kp S      &kp D                     &kp F         &kp G                                &kp H                       &kp J   &kp K      &kp L    &kp SEMI  &kp SQT          &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp LEFT_SHIFT            &kp Z   &kp X      &kp C                     &kp V         &kp B   &tog 2  &tog 5               &kp N                       &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT  &kp LEFT_GUI
+                                                  &kp ENTER  &thumb_layer 4 BACKSPACE  &kp LEFT_GUI                  &mt RIGHT_ALT ENTER  &thumb_layer_space 3 SPACE
+            >;
+
+            sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
+        };
+
+        gaming {
+            display-name = "base";
+            bindings = <
+&kp ESC         &kp GRAVE                 &kp N1  &kp N2     &kp N3                    &kp N4        &kp N5                               &kp N6                      &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS        &kp EQUAL
+&kp LC(C)       &kp TAB                   &kp Q   &kp W      &kp E                     &kp R         &kp T                                &kp Y                       &kp U   &kp I      &kp O    &kp P     &kp LBKT         &kp RBKT
+&kp LEFT_SHIFT  &mt RIGHT_CONTROL ESCAPE  &kp A   &kp S      &kp D                     &kp F         &kp G                                &kp H                       &kp J   &kp K      &kp L    &kp SEMI  &kp SQT          &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp LEFT_SHIFT            &kp Z   &kp X      &kp C                     &kp V         &kp B   &tog 2  &tog 5               &kp N                       &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT  &kp LEFT_GUI
+                                                  &kp ENTER  &thumb_layer 4 BACKSPACE  &kp LEFT_GUI                  &mt RIGHT_ALT ENTER  &thumb_layer_space 3 SPACE
             >;
 
             sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
@@ -156,7 +169,7 @@
             bindings = <
 &trans  &trans  &trans  &trans       &trans          &trans         &trans                          &trans     &trans    &trans          &trans            &trans    &trans  &trans
 &trans  &trans  &trans  &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                          &trans     &kp DEL   &kp LEFT_GUI    &kp LEFT_CONTROL  &kp BSLH  &trans  &trans
-&trans  &trans  &trans  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &trans                          &kp ENTER  &kp BSPC  &kp TAB         &kp LEFT_ALT      &kp APOS  &trans  &trans
+&trans  &trans  &trans  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &trans                          &kp ENTER  &kp BSPC  &kp SPACE       &kp TAB           &kp APOS  &trans  &trans
 &trans  &trans  &trans  &trans       &trans          &trans         &trans  &trans  &trans          &kp LBKT   &kp RBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE   &trans    &trans  &trans
                         &trans       &trans          &trans                         &kp RIGHT_META  &trans
             >;
@@ -168,8 +181,8 @@
             display-name = "mouse";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans    &trans    &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans    &trans    &mo 5     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &mkp MB3  &mkp MB1  &mkp MB2  &mo 5   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans    &trans    &mo 6     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &mkp MB3  &mkp MB1  &mkp MB2  &mo 6   &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &pan      &orbit    &trans  &trans  &trans
                         &trans  &trans  &trans                  &trans  &trans
             >;
@@ -194,7 +207,7 @@
             display-name = "mouse2";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &to 0   &trans    &trans    &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans    &trans    &mo 6     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans    &trans    &mo 7     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &mkp MB3  &mkp MB1  &mkp MB2  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &pan      &orbit    &trans  &trans  &trans
                         &trans  &trans  &trans                  &trans  &trans
